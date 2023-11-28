@@ -19,7 +19,7 @@ if(empty($cantidad)){
 exit("Fallo en el registro, para poder registrarte debes introducir tu direccion email.");
 }
 
-$consulta = "insert into compras (fecha,usuario,cantidad,magnitud,unitario,porcentaje,total) values '$fecha','$usuario','$cantidad','$magnitud','$unitario','$porcentaje','$total')";
+$consulta = "insert into compras (fecha,usuario,cantidad,magnitud,unitario,porcentaje,total) values ('$fecha','$usuario','$cantidad','$magnitud','$unitario','$porcentaje','$total')";
 $resultado = mysqli_query($conexion,$consulta);
 
 $num = mysqli_affected_rows($conexion);
